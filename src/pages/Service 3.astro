@@ -1,0 +1,33 @@
+---
+import ServiceLayout from "../layouts/ServiceLayout.astro";
+
+const data = {
+  title: "Interior Detailing Service",
+  description: "Deep interior cleaning and restoration for a fresh, like-new cabin",
+
+  heroTitle: "Step Into a Completely Reset Interior",
+  heroSubtitle: "Deep cleaning, stain removal, and conditioning for a fresh, premium feel.",
+
+  benefits: [
+    { title: "Deep Cleaning", desc: "Removes embedded dirt and stains." },
+    { title: "Odor Removal", desc: "Eliminates unpleasant smells." },
+    { title: "Material Protection", desc: "Preserves leather, fabric, and plastics." }
+  ],
+
+  process: [
+    { title: "Vacuuming", desc: "Full interior dust and debris removal." },
+    { title: "Steam Cleaning", desc: "Deep sanitization of surfaces." },
+    { title: "Seat Extraction", desc: "Removes stains from fabric." },
+    { title: "Leather Treatment", desc: "Conditioning and protection." },
+    { title: "Final Detailing", desc: "Finishing touches for a fresh look." }
+  ],
+
+  faqs: [
+    { q: "How long does it take?", a: "Usually 4–8 hours depending on condition." },
+    { q: "Can you remove tough stains?", a: "Most stains can be significantly improved or removed." },
+    { q: "Is it safe for leather?", a: "Yes, we use leather-safe conditioners." }
+  ]
+};
+---
+
+<ServiceLayout {...data} />

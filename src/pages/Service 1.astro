@@ -1,0 +1,32 @@
+---
+import ServiceLayout from "../layouts/ServiceLayout.astro";
+const data = {
+  title: "Ceramic Coating Service",
+  description: "Premium ceramic coating for long-lasting gloss and protection",
+
+  heroTitle: "Ceramic Coating That Actually Protects",
+  heroSubtitle: "Deep gloss, hydrophobic protection, and a finish that stays cleaner for longer.",
+
+  benefits: [
+    { title: "Extreme Gloss", desc: "Enhances depth and gives a mirror-like finish." },
+    { title: "Hydrophobic Surface", desc: "Water, dirt, and grime slide off easily." },
+    { title: "UV Protection", desc: "Prevents fading and oxidation." }
+  ],
+
+  process: [
+    { title: "Deep Wash & Decontamination", desc: "Removes dirt, tar, and iron particles." },
+    { title: "Paint Correction", desc: "Eliminates swirl marks and imperfections." },
+    { title: "Surface Prep", desc: "Ensures proper bonding of coating." },
+    { title: "Ceramic Application", desc: "Applied in controlled conditions." },
+    { title: "Curing & Inspection", desc: "Final quality check for durability." }
+  ],
+
+  faqs: [
+    { q: "How long does ceramic coating last?", a: "Typically 1 to 5 years depending on maintenance." },
+    { q: "Is it better than wax?", a: "Yes, it offers significantly longer protection." },
+    { q: "Does it remove scratches?", a: "No, but paint correction removes them before coating." }
+  ]
+};
+---
+
+<ServiceLayout {...data} />

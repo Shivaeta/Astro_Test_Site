@@ -1,0 +1,133 @@
+---
+import Layout from "./Layout.astro";
+
+const {
+  title,
+  description,
+  heroTitle,
+  heroSubtitle,
+  benefits = [],
+  process = [],
+  faqs = [],
+  ctaText = "Get a Quote"
+} = Astro.props;
+---
+
+<Layout title={title} description={description}>
+
+  <!-- HERO -->
+  <section class="bg-black text-white py-24">
+    ...
+  </section>
+
+  <!-- rest of sections -->
+
+</Layout>
+
+    <!-- HERO -->
+    <section class="bg-black text-white py-24">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h1 class="text-5xl font-bold leading-tight mb-6">
+          {heroTitle}
+        </h1>
+
+        <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+          {heroSubtitle}
+        </p>
+
+        <a href="#contact"
+           class="bg-white text-black px-8 py-4 rounded font-semibold hover:opacity-90 transition">
+          {ctaText}
+        </a>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    {benefits.length > 0 && (
+      <section class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-12 text-center">
+            Why It Matters
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            {benefits.map((item) => (
+              <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                <h3 class="font-semibold text-xl mb-3">
+                  {item.title}
+                </h3>
+                <p class="text-gray-600">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- PROCESS -->
+    {process.length > 0 && (
+      <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-10 text-center">
+            Our Process
+          </h2>
+
+          <div class="space-y-6">
+            {process.map((step, i) => (
+              <div class="flex gap-4 items-start">
+                <div class="w-8 h-8 flex items-center justify-center rounded-full bg-black text-white text-sm font-bold">
+                  {i + 1}
+                </div>
+                <div>
+                  <p class="font-semibold">{step.title}</p>
+                  <p class="text-gray-600">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- FAQ -->
+    {faqs.length > 0 && (
+      <section class="py-20 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-10">
+            FAQs
+          </h2>
+
+          <div class="space-y-6">
+            {faqs.map((faq) => (
+              <div class="border-b pb-4">
+                <p class="font-semibold mb-2">
+                  {faq.q}
+                </p>
+                <p class="text-gray-600">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- CTA -->
+    <section id="contact" class="py-20 bg-black text-white text-center">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">
+          Protect Your Car Today
+        </h2>
+
+        <a href="#"
+           class="bg-white text-black px-8 py-4 rounded font-semibold hover:opacity-90 transition">
+          {ctaText}
+        </a>
+      </div>
+    </section>
+
+  </body>
+</html>

@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Premium Car Detailing" description="Luxury car detailing service">
+  
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center bg-black text-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-5xl font-bold leading-tight mb-6">
+          Your Car Deserves More Than a Wash
+        </h1>
+        <p class="text-gray-300 text-lg mb-8">
+          Precision detailing for luxury vehicles. Paint correction, ceramic coating, and showroom-level finishes.
+        </p>
+
+        <div class="flex gap-4">
+          <a href="#contact" class="bg-white text-black px-6 py-3 rounded font-semibold">
+            Book a Slot
+          </a>
+          <a href="#work" class="border border-white px-6 py-3 rounded">
+            View Work
+          </a>
+        </div>
+
+        <div class="mt-8 flex gap-6 text-sm text-gray-400">
+          <span>500+ Cars Detailed</span>
+          <span>Premium Products</span>
+          <span>Luxury Focused</span>
+        </div>
+      </div>
+
+      <div class="h-[500px] bg-gray-800 rounded-2xl"></div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section id="work" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10">Real Cars. Real Results.</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="h-64 bg-gray-300 rounded-xl"></div>
+        <div class="h-64 bg-gray-300 rounded-xl"></div>
+        <div class="h-64 bg-gray-300 rounded-xl"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">
+        Most Cars Are Clean. Very Few Are Detailed.
+      </h2>
+
+      <p class="text-gray-600 leading-relaxed">
+        Swirl marks. Cheap wax. Missed interiors. If you’ve ever been disappointed after a car wash, you already know.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center">Our Services</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-xl shadow">
+          <h3 class="font-semibold text-xl mb-3">Paint Correction</h3>
+          <p class="text-gray-600">Remove swirl marks and restore depth.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl shadow">
+          <h3 class="font-semibold text-xl mb-3">Ceramic Coating</h3>
+          <p class="text-gray-600">Long-term protection with deep gloss.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl shadow">
+          <h3 class="font-semibold text-xl mb-3">Interior Detailing</h3>
+          <p class="text-gray-600">Deep cleaning and conditioning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10 text-center">Our Process</h2>
+
+      <div class="grid md:grid-cols-5 gap-4 text-center">
+        <div>Inspection</div>
+        <div>Wash</div>
+        <div>Correction</div>
+        <div>Protection</div>
+        <div>Final Check</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="py-20 bg-gray-900 text-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-xl italic">
+        "My car looked better than delivery day."
+      </p>
+      <p class="mt-4 text-gray-400">— Verified Customer</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="py-20 bg-black text-white text-center">
+    <h2 class="text-3xl font-bold mb-6">Book Your Detailing</h2>
+    <a href="booking" class="bg-white text-black px-8 py-4 rounded font-semibold">
+      Book Now
+    </a>
+  </section>
+
+</Layout>
