@@ -1,0 +1,53 @@
+---
+import Timer from "../components/Timer.jsx";
+import "../styles/timer.css";
+import Auth from "../components/Auth.jsx";
+---
+
+<html>
+  <body class="app light" id="app">
+
+    <!-- Navbar -->
+    <div class="nav">
+      <div>Focus Timer</div>
+      <button onclick="toggleTheme()">Toggle</button>
+    </div>
+
+    <!-- Timer -->
+     <Auth client:load />
+    <Timer client:load />
+
+    <!-- Content -->
+    <section class="content">
+      <h1>Minimal Focus Timer</h1>
+      <p>
+        A distraction-free timer built for deep work and focus sessions.
+      </p>
+    </section>
+
+    <script>
+  const app = document.getElementById("app");
+
+  function toggleTheme() {
+    app.classList.toggle("dark");
+    app.classList.toggle("light");
+
+    localStorage.setItem(
+      "theme",
+      app.classList.contains("dark") ? "dark" : "light"
+    );
+  }
+
+  // 👇 THIS LINE FIXES YOUR ERROR
+  window.toggleTheme = toggleTheme;
+
+  // Load saved theme
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark") {
+    app.classList.remove("light");
+    app.classList.add("dark");
+  }
+</script>
+
+  </body>
+</html>
